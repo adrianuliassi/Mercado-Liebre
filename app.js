@@ -8,7 +8,9 @@ app.get ('/', (req, res) => {
     res.sendFile (path.join(__dirname,'/views/home.html'))
 });
 
-app.listen (3000, () => 
+const PORT = process.env.PORT || 3000;
+
+app.listen (PORT, () => 
 console.log ("Servidor corriendo en el puerto 3000"));
 
 app.get('/register', (req,res) => {
